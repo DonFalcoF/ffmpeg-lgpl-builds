@@ -1,0 +1,23 @@
+# A reduced LGPL build of FFmpeg from BtbN's scripts: one key=value per line, read through ffmpeg-pin.sh by every
+# script that builds, fetches, packs or watches the build.
+#
+# What the build starts from: FFmpeg's own tag, BtbN/FFmpeg-Builds (MIT scripts) at a tag and its commit, and BtbN's
+# lgpl 9.0 build image of each target pinned by digest (amd64 images, run through Rosetta on an arm64 host).
+# `btbn.images-commit` is the BtbN commit whose scripts built those two images (its Actions run of the images' day),
+# which names the bundled libraries' sources; `btbn.tag` pins build.sh and the variants only.
+version=n9.0.2
+btbn.tag=autobuild-2026-09-30-13-08
+btbn.commit=6c9aec5fc9a72ec3abedd1fa84db141fa18cf52b
+btbn.images-commit=63ac3265b0789ea16c7b1f8351cd2ad195a28722
+linux64.image=ghcr.io/btbn/ffmpeg-builds/linux64-lgpl-9.0@sha256:1881806695b6ecdbd256bb057bb0ec80d55e5b649d5c5c048fa439fda18d6609
+linuxarm64.image=ghcr.io/btbn/ffmpeg-builds/linuxarm64-lgpl-9.0@sha256:192bd6a396d47f42f3d34ae733da14d4dab7d79123c2705152e9f17a2e08178d
+#
+# What the build produced: the immutable release of the public repository holding both archives and their whole
+# corresponding source (FFmpeg, BtbN's scripts, these build inputs; the linked libraries' sources), and the SHA-256 of
+# each. Empty `tag` until the first publication; every reader skips while `tag` is empty.
+repository=
+tag=
+linux64.sha256=
+linuxarm64.sha256=
+source.sha256=
+libraries-source.sha256=
